@@ -5,7 +5,7 @@ const Footer = () => {
         Made with <span className='text-pink-600'>♥</span> by Maëlis
       </p>
       <a
-        href='https://github.com/maelis1234/ton-repo'
+        href='https://github.com/maelis1234/new-recettes-maelis'
         target='_blank'
         rel='noopener noreferrer'
         className='hover:text-pink-600'
