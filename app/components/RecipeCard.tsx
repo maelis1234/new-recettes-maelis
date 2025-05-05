@@ -1,11 +1,7 @@
 import Link from 'next/link'
 import { Recipe } from '../types/recipe'
 
-interface Props {
-  recipe: Partial<Recipe>
-}
-
-const RecipeCard = ({ recipe }: Props) => {
+const RecipeCard = ({ recipe }: { recipe: Partial<Recipe> }) => {
   return (
     <div
       key={recipe.id}

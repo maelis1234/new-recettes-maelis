@@ -1,15 +1,15 @@
 import { getRecetteById } from '@/app/lib/api'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { Recipe } from '../types/recipe'
 
-interface Props {
-  params: {
-    id: string
-  }
-}
-
-export default async function RecettePage({ params }: Props) {
-  const recette = await getRecetteById(params.id)
+export default async function RecettePage({
+  params,
+}: {
+  params: Promise<{ id: string }>
+}) {
+  const { id } = await params
+  const recette: Recipe | null = await getRecetteById(id)
 
   if (!recette) return notFound()
 
@@ -29,8 +29,8 @@ export default async function RecettePage({ params }: Props) {
           <section className='mb-6'>
             <h2 className='text-lg font-semibold mb-2'>Ingrédients</h2>
             <ul className='list-disc list-inside space-y-1 text-sm'>
-              {recette.ingredients.map((ingr, i) => (
-                <li key={i}>{ingr}</li>
+              {recette.ingredients.map((ingr) => (
+                <li key={ingr}>{ingr}</li>
               ))}
             </ul>
           </section>
@@ -38,8 +38,8 @@ export default async function RecettePage({ params }: Props) {
           <section>
             <h2 className='text-lg font-semibold mb-2'>Instructions</h2>
             <ol className='list-decimal list-inside space-y-1 text-sm'>
-              {recette.instructions.map((step, i) => (
-                <li key={i}>{step}</li>
+              {recette.instructions.map((step) => (
+                <li key={step}>{step}</li>
               ))}
             </ol>
           </section>
