@@ -17,7 +17,7 @@ export default async function RecettePage({
     <div className='flex justify-center items-start min-h-screen'>
       <div className='w-full max-w-2xl'>
         <Link href={`/`}>
-          <button className='mb-4 px-4 py-2 border-2 border-black dark:border-white bg-white text-black dark:bg-neutral-900 dark:text-white shadow-[2px_2px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0_rgba(255,255,255,1)] hover:bg-gray-100 dark:hover:bg-neutral-800 transition cursor-pointer'>
+          <button className='mb-4 px-4 py-2 border-2 border-black dark:border-white bg-white text-black dark:bg-neutral-900 dark:text-white cursor-pointer transition-all duration-100 ease-out shadow-[2px_2px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0_rgba(255,255,255,1)] hover:bg-gray-100 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] dark:hover:bg-neutral-800 dark:hover:-translate-x-1 dark:hover:-translate-y-1 dark:hover:shadow-[4px_4px_0_rgba(255,255,255,1)] active:bg-gray-200 active:translate-x-0 active:translate-y-0 active:shadow-[2px_2px_0px_rgba(0,0,0,1)] dark:active:bg-neutral-700 dark:active:shadow-[2px_2px_0_rgba(255,255,255,1)]'>
             ← Retour
           </button>
         </Link>
